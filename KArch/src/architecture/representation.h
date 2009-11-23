@@ -1,29 +1,32 @@
-#ifndef _representation_h_
-#define _representation_h_ 1
+#ifndef representation_h_
+#define representation_h_ 1
 
 #include <string>
 
+#include <string>
+#include "architecture/communicationProxy.h"
+#include "communication/KStream.h"
+#include "boost/any.hpp"
+#include "Sockets/Mutex.h"
+#include "../hal/syscall.h"
 #include "architecture/blackboard.h"
 
+ class Blackboard;
+
 class Representation {
-
-    public:
-      
-      Representation( const std::string RepName , Blackboard * blk) 
-            : RepName( RepName ) , blk( blk ) {
-          blk->Representations[RepName] = this; }//FIXME
-
-      virtual ~Representation() {
-          blk->Representations.erase( RepName );  
-      }
-
-      std::string GetRepName () { return RepName; }
-
     private:
 
       const std::string RepName;
 
       Blackboard * const blk;
+    public:
+
+      Representation( const std::string RepName ,  Blackboard * blk);
+      virtual ~Representation();
+
+      std::string GetRepName () { return RepName; }
+
+
 
 };
 

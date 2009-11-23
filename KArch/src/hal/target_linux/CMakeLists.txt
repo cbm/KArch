@@ -6,5 +6,5 @@ message ( "" )
 
 add_executable ( kourarch main.cpp )
 
-target_link_libraries( kourarch tinyxml ${TargetLinkLibraries} )
+target_link_libraries( kourarch ${TargetLinkLibraries} Sockets  )
 

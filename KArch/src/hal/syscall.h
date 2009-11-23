@@ -11,6 +11,7 @@ class SysCall {
 
         static void _exit ( int status ); 
 
+        static void yield();
 };
 
 #endif // _syscall_h_

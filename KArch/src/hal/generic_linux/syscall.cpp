@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <cstdlib>
-
+#include <pthread.h>
 int SysCall::_usleep ( unsigned long usec ) {
     return usleep( usec );
 }
@@ -18,5 +18,9 @@ unsigned long SysCall::_GetCurrentTimeInUSec () {
 
 void SysCall::_exit ( int status ) {
     exit( status ); 
+}
+
+void SysCall::yield(){
+    sched_yield();
 }
     

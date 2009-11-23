@@ -9,7 +9,7 @@ message( "" )
 #set( cmake_verbose_makefile on )
 
 option ( MAKE_DEBUG "Set to on to enable debugging symbols" OFF )
-
+INCLUDE_DIRECTORIES( "external/" )
 
 if ( MAKE_DEBUG )
     add_definitions( -DDEBUG -g )

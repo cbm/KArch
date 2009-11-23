@@ -1,5 +1,5 @@
-#ifndef _provider_h_
-#define _provider_h_ 1
+#ifndef provider_h_
+#define provider_h_ 1
 
 #include <vector>
 #include <map>

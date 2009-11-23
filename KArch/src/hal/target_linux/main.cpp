@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "architecture/talws.h"
-
+//#include "architecture/talws.h"
+#include "architecture/representation.h"
 
 
 #include "../../hal/generic_linux/pthread.h"
@@ -19,12 +19,12 @@ namespace {  //FIXME
 int main () {
 
     std::cout<<"Main: Inst"<<std::endl;
-
-    Talws tal;
+    //Representation rep("name",NULL);
+//    Talws tal;
 
     std::cout<<"Main: Starting"<<std::endl;
 
-    tal.Start();
+//    tal.Start();
 
     std::cout<<"Main: Sleeping"<<std::endl;
 
@@ -32,7 +32,7 @@ int main () {
 
     std::cout<<"Main: Stoping"<<std::endl;
 
-    tal.Stop();
+//    tal.Stop();
 
     usleep(3000000);
 

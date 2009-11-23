@@ -26,7 +26,7 @@ class MyProvider : public Provider, public MyRep {
 
         void UpdatePointers () {
 
-            theMyRep1 = REP_INSTANCE(MyRep1);
+    //        theMyRep1 = REP_INSTANCE(MyRep1);
 
             std::cout<<"TheMyRep1 addr is: "<<theMyRep1<<std::endl;
         }

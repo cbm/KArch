@@ -6,7 +6,7 @@ message ( "" )
 
 add_library( GenLinux STATIC pthread.cpp syscall.cpp )
 
-target_link_libraries( GenLinux  pthread )
+target_link_libraries( GenLinux  pthread tinyxml )
 
 set ( TargetLinkLibraries ${TargetLinkLibraries} GenLinux PARENT_SCOPE )
 

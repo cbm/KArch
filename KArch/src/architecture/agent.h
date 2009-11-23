@@ -14,8 +14,9 @@ class Agent : public Threadable  {
 
     public:
 
-        Agent ( std::vector<std::string> providerList ) {
-            blk = new Blackboard;
+        Agent ( string name, std::vector<std::string> providerList ) : agent_name(name) {
+
+            blk = new Blackboard(agent_name);
             providers = hand.LoadProviders ( blk , providerList );
         }
 
@@ -32,6 +33,7 @@ class Agent : public Threadable  {
 
 
     private:
+        string agent_name;
 
         ProviderHandler hand;
 
